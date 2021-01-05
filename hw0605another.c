@@ -67,17 +67,17 @@ int32_t func02(int32_t a,int32_t b)
 
 int32_t func03(int32_t a,int32_t b)
 {
-    int32_t A=(a-1)/13;
-    int32_t B=(b-1)/13;
+    int32_t patternA=(a-1)/13;
+    int32_t patternB=(b-1)/13;
     if(a%13==1)
-    A++;
+    patternA=patternA*2+1;
+    else
+    patternA=patternA*2;
     if(b%13==1)
-    B++;
-    if(A>B)
-    {
-        return a > b;
-    }
-    else if(A==B)
+    patternB=patternB*2+1;
+    else
+    patternB=patternB*2;
+    if(patternA==patternB)
     {
         return b > a;
     }
