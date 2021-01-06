@@ -41,10 +41,19 @@ void run()
 		
 	}	
 	printf("Result:");
-	for(int i=0;i<times;i++)
+	if(times>=10)
 	{
-		if(times>9) i=times-10;
-		printf(" %d",ans[i]);
+		for(int i=times-10;i<times;i++)
+		{
+			printf(" %d",ans[i]);
+		}
+	}
+	else
+	{
+		for(int i=0;i<times;i++)
+		{
+			printf(" %d",ans[i]);
+		}
 	}
 	printf("\n");
 }
